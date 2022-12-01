@@ -7,7 +7,7 @@ const ServiceProvider = (props: IChildrenOnly) => {
   const { children } = props;
 
   const endpointUrl = (query: string) => {
-    const endpoint = process.env.API_URL;
+    const endpoint = process.env.REACT_APP_API_URL + 'search/';
     return endpoint + query;
   };
 
@@ -17,9 +17,6 @@ const ServiceProvider = (props: IChildrenOnly) => {
     arrayBuffer?: string
   ) => {
     let config: AxiosRequestConfig = {
-      headers: {
-        "Content-Type": "application/json"
-      },
       cancelToken
     };
 

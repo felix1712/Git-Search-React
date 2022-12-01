@@ -1,11 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Layout from './components/Layout/Layout'
+import Layout from './components/Layout/Layout';
+import ServiceProvider from "./Contexts/ServiceContext";
+import ToasterProvider from './Contexts/ToasterContext';
+import SearchProvider from './Contexts/SearchContext';
 
 function App() {
   return (
-    <Layout />
+    <ToasterProvider>
+      <ServiceProvider>
+        <SearchProvider>
+          <Layout />
+        </SearchProvider>
+      </ServiceProvider>
+    </ToasterProvider>
   );
 }
 
