@@ -5,8 +5,8 @@ const Home = lazy(() =>
   import("../../pages/Home/Home")
 );
 
-const SearchPreview = lazy(() =>
-  import("../../pages/SearchPreview/SearchPreview")
+const Search = lazy(() =>
+  import("../../pages/Search/Search")
 );
 
 const Layouts = () => {
@@ -21,7 +21,7 @@ const Layouts = () => {
           />
           <Route
             path="/search"
-            element={<SearchPreview />}
+            element={<Search />}
           />
           <Route path="*" element={<Navigate to="/" replace />} /> {/*default root */}
         </Routes>
