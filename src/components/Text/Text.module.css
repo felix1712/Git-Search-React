@@ -1,0 +1,80 @@
+.ds_text {
+  color: var(--primaryTextBlue);
+  margin-bottom: 0.35em;
+}
+
+.ds_text_align_right {
+  text-align: right;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 3rem;
+  letter-spacing: -0.32px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.75rem;
+  line-height: 2.62rem;
+  letter-spacing: -0.24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  letter-spacing: -0.16px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 1.25rem;
+  line-height: 1.87rem;
+  letter-spacing: -0.16px;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.68rem;
+  letter-spacing: -0.16px;
+  font-weight: 700;
+}
+
+h6 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+p.ds_text_subtitle {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.16px;
+}
+
+p.ds_text_small {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.16px;
+}
+
+small {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  letter-spacing: 0.24px;
+}
+
+.ds_text_italic {
+  font-style: italic;
+}
+
+.ds_text_bold {
+  font-weight: bold;
+}
