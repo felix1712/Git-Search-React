@@ -1,13 +1,223 @@
+@font-face {
+	font-family: 'Proxima Nova';
+	src: url('./assets/fonts/ProximaNova-Bold.woff');
+	font-style: normal;
+	font-weight: bold;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Proxima Nova';
+	src: url('./assets/fonts/ProximaNova-BoldIt.woff');
+	font-style: italic;
+	font-weight: bold;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Proxima Nova';
+	src: url('./assets/fonts/ProximaNova-Regular.woff');
+	font-style: normal;
+	font-weight: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Proxima Nova';
+	src: url('./assets/fonts/ProximaNova-RegularIt.woff');
+	font-style: italic;
+	font-weight: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Proxima Nova';
+	src: url('./assets/fonts/ProximaNova-Light.woff');
+	font-style: normal;
+	font-weight: lighter;
+	font-display: swap;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	height: var(--100vvh, 100%);
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+	height: 100%;
+	margin: 0;
+	font-size: 14px;
+	-webkit-overflow-scrolling: touch;
+	overflow: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#__next {
+	height: 100%;
+	overflow: auto;
+	position: relative;
+}
+
+html {
+	transition: height 0.3s ease-out;
+}
+
+@media only screen and (max-width: 400px) {
+	html,
+	body {
+		font-size: 85%;
+	}
+}
+
+body {
+	min-height: 100%;
+	margin: 0;
+	font-family: 'Proxima Nova', -apple-system, BlinkMacSystemFont, Segoe UI,
+		Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+		sans-serif;
+	color: var(--sb-primary-black);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow: auto;
+	background-color: var(--sb-neutral-5);
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+optgroup,
+select,
+textarea {
+	margin: 0px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container-wrapper {
+	background: var(--sb-primary-white);
+	height: 100%;
+	max-width: 973px;
+	margin: auto;
+	position: relative;
+	box-shadow: 0px 8px 50px rgb(149 149 149 / 10%);
+	right: 0;
+	left: 0;
+}
+
+.fixed_button {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	max-width: 973px;
+}
+
+.react-tel-input {
+	padding: 7px 0;
+}
+
+.react-tel-input .flag-dropdown.open .selected-flag,
+.react-tel-input .selected-flag:hover,
+.react-tel-input .selected-flag:focus,
+.react-tel-input .selected-flag.open {
+	background-color: transparent;
+}
+
+.react-tel-input .flag-dropdown {
+	border: none;
+	background-color: transparent;
+}
+
+.react-tel-input .form-control {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	font-size: 1.15rem;
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid var(--sb-neutral-20);
+}
+
+.react-tel-input .form-control:focus {
+	border-bottom: 1.5px solid var(--sb-primary-green) !important;
+}
+
+.arrow {
+  display: inline-block;
+  position: absolute;
+  padding: 4px;
+  border: solid var(--sb-neutral-20);
+  border-width: 0 3px 3px 0;
+  border-radius: 1px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.bottom {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+:root {
+	--sb-primary-black: #333333;
+	--sb-primary-white: #ffffff;
+	--sb-primary-green: #00ab6b;
+	--sb-primary-orange: #f5931b;
+	--sb--secondary-blue: #2478b4;
+	--sb-secondary-violet: #9343c8;
+	--sb-primary-red: #ee4a49;
+	--sb-secondary-red: #eb605a;
+	--sb-green-5: #f2fbf8;
+	--sb-green-10: #e5f7f0;
+	--sb-green-15: #d9f2e9;
+	--sb-green-20: #bfeada;
+	--sb-green-30: #8cd9bc;
+	--sb-green-40: #4cc497;
+	--sb-green-60: #00915b;
+	--sb-green-70: #00784b;
+	--sb-neutral-0: #ffffff;
+	--sb-neutral-5: #f9f9f9;
+	--sb-neutral-10: #ededed;
+	--sb-neutral-20: #cbcbcb;
+	--sb-neutral-25: #b5b5b5;
+	--sb-neutral-30: #949494;
+	--sb-neutral-35: #969696;
+	--sb-neutral-40: #747474;
+	--sb-neutral-50: #5c5c5c;
+	--sb-neutral-60: #414141;
+	--sb-neutral-70: #333333;
+	--sb-neutral-75: #2a2a2a;
+	--sb-neutral-90: #121212;
+	--sb-input-label: #6b6b6b;
+	--sb-pin-color: #1c1c1c;
+	--sb-green-light: #e1f6e5;
+	--sb-red-light: #fbdfde;
 }
