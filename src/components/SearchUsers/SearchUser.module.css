@@ -1,0 +1,33 @@
+.search_user_frame{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search_user_container {
+  flex-grow: 1;
+  width: 30%;
+  max-width: 30%;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.search_user_item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--sb-neutral-20);
+  border-radius: 7px;
+  height: 150px;
+}
+
+.search_user_item img{
+  border-radius: 50%;
+  height: auto;
+  width: 25%;
+  margin-bottom: .5rem;
+}
+
+.search_user_item h5{
+  margin-left: 0;
+}
