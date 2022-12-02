@@ -9,10 +9,6 @@ export const useSearchRepository = (props: ISearchRepositoryProps) => {
     SearchActionsContext
   );
   const query = `repositories?q=${q}&per_page=${rowDisplay}&page=${pageDisplay}`;
-
-  const redirectGithub = (url: string) => {
-    return window.location.href = url;
-  }
   
   useEffect(() => {
     searchGlobal(query)
@@ -20,7 +16,6 @@ export const useSearchRepository = (props: ISearchRepositoryProps) => {
 
   const searchPreviewValue: IUseSearchRepo = {
     searchData,
-    redirectGithub
   }
   return searchPreviewValue;
 }

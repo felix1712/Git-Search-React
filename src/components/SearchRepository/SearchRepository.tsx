@@ -4,13 +4,13 @@ import repo from "../../assets/icons/repo.png";
 import star from "../../assets/icons/star.png";
 import code from "../../assets/icons/code.png";
 import { Text } from '../Text/Text';
+import { redirectGithub } from '../../utils/SharedFunction';
 
 import styles from './SearchRepository.module.css'
 
 export const SearchRepository = (props: ISearchRepositoryProps) => {
   const {
     searchData,
-    redirectGithub
   }: IUseSearchRepo = useSearchRepository(props);
   
   return (
