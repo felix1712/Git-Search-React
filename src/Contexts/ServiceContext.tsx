@@ -7,7 +7,7 @@ const ServiceProvider = (props: IChildrenOnly) => {
   const { children } = props;
 
   const endpointUrl = (query: string) => {
-    const endpoint = process.env.REACT_APP_API_URL + 'search/';
+    const endpoint = process.env.REACT_APP_API_URL;
     return endpoint + query;
   };
 
