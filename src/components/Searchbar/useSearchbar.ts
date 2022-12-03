@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from "react";
+import { useState, useContext, useEffect, FormEvent } from "react";
 import axios from "axios";
 import { useNavigate, createSearchParams } from 'react-router-dom'
 import { ServiceActionsContext } from "../../Contexts/ServiceContext";
@@ -14,28 +14,6 @@ export const useSearchBar = (props: any) => {
   );
   const { addToastr } = useContext(ToasterActionsContext);
   const [singleSearchInput, setSingleSearchInput] = useState<string>("");
-  const [searchSuggestion, setSearchSuggestion] = useState<any>([
-    {
-      label: 'Repository',
-      type: 'repositories'
-    },
-    {
-      label: 'Users',
-      type: 'users'
-    },
-    {
-      label: 'Issues',
-      type: 'issues'
-    },
-    {
-      label: 'Commits',
-      type: 'commits'
-    },
-    {
-      label: 'Topics',
-      type: 'topics'
-    }
-  ]);
   const [isSuggestion, setIsSuggestion] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -54,12 +32,12 @@ export const useSearchBar = (props: any) => {
     }, 300);
   };
 
-  const submitSearch = async (e?: React.FormEvent<HTMLFormElement>, type?: string) => {
+  const submitSearch = async (e?: FormEvent<HTMLFormElement>, type?: string) => {
     if (e) e.preventDefault();
     setIsLoading(true);
     handleSuggestionBox(false);
-    const query = (type ? type : 'repositories') + '?q='+singleSearchInput + '&per_page=10&page=1';
-    const paramsUrl = '?type=' + (type ? type : 'repositories') + '&q=' + singleSearchInput;
+    const query = `search/${(type ? type : 'repositories')}?q=${singleSearchInput}&per_page=10&page=1`;
+    const paramsUrl = `?type=${(type ? type : 'repositories')}&q=${singleSearchInput}`;
     // 2 lines aboves can be improvement
     try {
       const { data } = await getAxios(query, signal.token);
@@ -92,7 +70,6 @@ export const useSearchBar = (props: any) => {
     singleSearchInput,
     onChangeSingleSearchInput,
     leaveInput,
-    searchSuggestion,
     isSuggestion,
     handleSuggestionBox,
   };

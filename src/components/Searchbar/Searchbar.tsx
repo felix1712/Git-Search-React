@@ -1,10 +1,10 @@
 import React, {MouseEvent} from "react";
 import { useSearchBar } from "./useSearchbar";
 import { Input } from "../Input/Input";
-// import { Select } from "../Select/Select";
 import { Text } from "../Text/Text";
-import { ImageTag } from "../ImageTag/ImageTag";
 import { LoaderPartial } from "../LoaderPartial/LoaderPartial";
+import { ImageTag } from "../ImageTag/ImageTag";
+import { searchSuggestion } from "../../utils/Constant";
 import searchIcon from "../../assets/icons/search.svg";
 import styles from "./Searchbar.module.css";
 
@@ -16,7 +16,6 @@ export const Searchbar = (props: any) => {
     singleSearchInput,
     leaveInput,
     isSuggestion,
-    searchSuggestion,
     handleSuggestionBox
   } = useSearchBar(props);
   return (
@@ -40,7 +39,7 @@ export const Searchbar = (props: any) => {
               className={styles["search_bar_icon"]}
               onClick={e => submitSearch(e)}
             >
-              <img src={searchIcon} alt="search" onClick={undefined} />
+              <ImageTag src={searchIcon} alt="search" onClick={undefined} />
             </span>
           </div>
         </div>
