@@ -8,7 +8,7 @@ export const useSearchUser = (props: ISearchRepositoryProps) => {
   const { searchGlobal } = useContext(
     SearchActionsContext
   );
-  const query = `users?q=${q}&per_page=${rowDisplay}&page=${pageDisplay}`;
+  const query = `search/users?q=${q}&per_page=${rowDisplay}&page=${pageDisplay}`;
   
   useEffect(() => {
     searchGlobal(query)

@@ -31,3 +31,11 @@
 .search_user_item h5{
   margin-left: 0;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .search_user_container {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 0;
+  }
+}
