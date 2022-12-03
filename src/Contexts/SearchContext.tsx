@@ -1,11 +1,6 @@
-import React, { useState, useContext, IChildrenOnly } from "react";
+import React, { useState, useContext, IChildrenOnly, ISearchContext } from "react";
 import axios from 'axios';
 import { ServiceActionsContext } from "../Contexts/ServiceContext";
-
-interface ISearchContext {
-  searchData: any;
-  searchDataTotal: number;
-}
 
 interface ISearchActionsContext {
   fillSearchData: (data: any) => void;
