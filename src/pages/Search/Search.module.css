@@ -1,0 +1,23 @@
+.search_sub_header_frame{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.sub_header_left p{
+  font-size: 1.2rem;
+}
+
+.sub_header_right{
+  width: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.search_select_container{
+  width: 5rem;
+  margin-left: 1rem;
+}
