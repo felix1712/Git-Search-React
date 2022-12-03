@@ -8,7 +8,7 @@ export const useSearchTopic = (props: any) => {
   const { searchGlobal } = useContext(
     SearchActionsContext
   );
-  const query = `topics?q=${q}&per_page=${rowDisplay}&page=${pageDisplay}`;
+  const query = `search/topics?q=${q}&per_page=${rowDisplay}&page=${pageDisplay}`;
   
   useEffect(() => {
     searchGlobal(query)
