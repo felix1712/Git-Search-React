@@ -33,6 +33,14 @@ declare module "react" {
     score: number;
   }
 
+  interface ISearchPages {
+    rowDisplay: number;
+    pageDisplay: number;
+    handleChangeSelectOption: (data: number) => void;
+    handlePagination: (e:MouseEvent<HTMLElement>, page: number) => void;
+    searchDataTotal: any;
+  }
+
   interface IUserGithub {
     login: string;
     id: number
