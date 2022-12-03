@@ -1,0 +1,89 @@
+.user_frame{
+  display: flex;
+}
+
+.user_left{
+  width: 100%;
+  max-width: 17vw;
+}
+
+.user_avatar img{
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 7px;
+}
+
+.user_name{
+  margin: 1rem 0 1.2rem;
+}
+
+.user_name h3{
+  margin: 0;
+}
+
+.user_name p{
+  font-size: 1.2rem;
+  color: var(--sb-neutral-25);
+  text-align: justify;
+}
+
+.user_bio p{
+  font-size: 1rem;
+  margin: 0;
+}
+
+.user_github{
+  margin: 1rem 0;
+}
+
+.user_github a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--sb-primary-green);
+  border-radius: 7px;
+  border: 1px solid var(--sb-primary-green);
+  font-size: 1.3rem;
+  /* font-weight: bold; */
+  color: var(--sb-primary-white);
+  padding: 10px 10px;
+}
+
+.user_github a:hover{
+  background: var(--sb-primary-white);
+  color: var(--sb-primary-green);
+}
+
+.user_github a img{
+  margin-left: 10px;
+  height: 100%;
+  width: 27px;
+}
+
+.user_location{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.user_location img{
+  width: 20px;
+  height: 100%;
+  margin-right: .5rem;
+}
+
+.user_location p{
+  margin: 0;
+}
+
+.user_right{
+  margin-left: 2rem;
+}
+
+.user_public_repo_container h3{
+  margin:0;
+}
+
+.user_public_repo{
+  margin-top: 1.5rem;
+}
