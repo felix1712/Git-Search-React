@@ -6,7 +6,7 @@
 .header-container {
   max-width: 1440px;
   width: 100%;
-  padding: 20px;
+  padding: 20px 30px;
   margin: 0 auto;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .header-right{
-  max-width: 40%;
+  max-width: 60%;
 }
 
 .header-searchbar {
