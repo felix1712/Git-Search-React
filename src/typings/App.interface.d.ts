@@ -52,6 +52,7 @@ declare module "react" {
     received_events_url: string;
     type: string;
     site_admin: boolean;
+    score?: IScore
   }
   
   interface ILicenseGit {
@@ -145,14 +146,26 @@ declare module "react" {
     score: IScore;
   }
 
-  interface ISearchRepositoryProps {
+  interface  ISearchRepositoryProps{
     q: string | null;
     rowDisplay: number;
     pageDisplay: number;
   }
+  
+  interface ISearchTopic {
+    searchTopic: (q: string) => void;
+  }
+
+  interface IUseSearchRepoValue extends ISearchTopic {
+    searchData: ISearchRepositoryData[] | [];
+  }
 
   interface IUseSearchRepo {
-    searchData: ISearchRepositoryData[] | [];
-    redirectGithub: (url: string) => void;
+    searchData: ISearchRepositoryData[] | IUserGithub[] | [];
+  }
+
+  interface ISearchContext {
+    searchData: any;
+    searchDataTotal: number;
   }
 }
