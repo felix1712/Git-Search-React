@@ -1,4 +1,4 @@
-import {useState, MouseEvent} from 'react';
+import { ISearchPages } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useSearch } from './useSearch';
 import { SearchRepository } from '../../components/SearchRepository/SearchRepository';
@@ -16,11 +16,12 @@ const Search = () => {
   const getQuery: string | null = searchParams.get('q');
   
   const {
+    rowDisplay,
+    pageDisplay,
+    handleChangeSelectOption,
+    handlePagination,
     searchDataTotal
-  } = useSearch();
-
-  const [rowDisplay, setRowDisplay] = useState<number>(10);
-  const [pageDisplay, setPageDisplay] = useState<number>(1);
+  }: ISearchPages = useSearch();
 
   const renderPreview = () => {
     switch(getType){
@@ -35,14 +36,6 @@ const Search = () => {
     }
   }
 
-  const handleChangeSelectOption = (data: number) => {
-    setRowDisplay(Number(data));
-    setPageDisplay(1)
-  };
-
-  const handlePagination = (e:MouseEvent<HTMLElement>, page: number) => {
-    setPageDisplay(page)
-  }
   return (
     <>
       <div className={styles["search_sub_header_frame"]}>
