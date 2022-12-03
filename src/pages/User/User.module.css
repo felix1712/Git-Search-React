@@ -87,3 +87,29 @@
 .user_public_repo{
   margin-top: 1.5rem;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .user_frame{
+    flex-direction: column;
+  }
+
+  .user_left{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  .user_name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .user_github{
+    width: 100%;
+  }
+
+  .user_right{
+    margin-left: 0;
+  }
+}
