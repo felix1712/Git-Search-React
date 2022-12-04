@@ -17,7 +17,7 @@ export const Header = () => {
     <header className={styles["main-header"]}>
       <div className={styles["header-container"]}>
         <NavLink to="/home">
-          <Text variant="h3">Git bitFlyer</Text>
+          <Text variant="h3">Git Search App</Text>
         </NavLink>
         <div className={styles["header-right"]}>
           <div className={styles["header-searchbar"]}>
